@@ -31,10 +31,11 @@ class FrostDatasource(private val clientId: String, private val clientPassword: 
         }
         // Need Auth with clientId to make get-requests to Frost
         install(Auth) {
-            basic {
-                credentials {
-                    BasicAuthCredentials(username = clientId, password = clientPassword)
+            bearer { // Frost now prefers Bearer over Basic
+                loadTokens {
+                    BearerTokens(clientId, "")
                 }
+
             }
         }
     }
@@ -54,14 +55,14 @@ class FrostDatasource(private val clientId: String, private val clientPassword: 
             listOf(
                 "air_temperature",
                 "cloud_area_fraction",
-                "snow_coverage_type"
+                "snow_depth"
             ).joinToString(separator = "%2C%20")
             // If we want historical data, we use mean-values, to lower the response-size
         } else {
             listOf(
                 "mean(air_temperature%20P1M)",
                 "mean(cloud_area_fraction%20P1M)",
-                "mean(snow_coverage_type%20P1M)"
+                "mean(snow_depth%20P1M)"
             ).joinToString(separator = "%2C%20")
         }
 
@@ -88,13 +89,13 @@ class FrostDatasource(private val clientId: String, private val clientPassword: 
             listOf(
                 "air_temperature",
                 "cloud_area_fraction",
-                "snow_coverage_type"
+                "snow_depth"
             ).joinToString(separator = "%2C%20")
         } else {
             listOf(
                 "mean(air_temperature%20P1M)",
                 "mean(cloud_area_fraction%20P1M)",
-                "mean(snow_coverage_type%20P1M)"
+                "mean(snow_depth%20P1M)"
             ).joinToString(separator = "%2C%20")
         }
 
