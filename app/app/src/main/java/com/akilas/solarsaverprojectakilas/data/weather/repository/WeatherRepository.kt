@@ -6,10 +6,10 @@ import com.akilas.solarsaverprojectakilas.data.weather.dataSource.FrostDatasourc
 // Frost-api repository
 class WeatherRepository {
 
-    // Using my (Magnus) clientId for authentication to the API
+    // Using my (akil) clientId for authentication to the API
     private val datasource = FrostDatasource(
-        clientId = "bf9bb916-9b2d-48c1-b521-77040f83b947",
-        clientPassword = "7d4c6c4b-b118-46f0-96ac-c44bf86c0ef5"
+        clientId = "c9bb4306-6e35-4784-852d-cd45ac9cab21",
+        clientPassword = "ee3f0b33-8a33-48dc-940d-02fb20530679"
     )
 
     /*

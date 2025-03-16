@@ -12,8 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SolarSaverProjectAkilas"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCfaxHBIZb_Dr_KHggZi6pIFqJo-B6MWL8" />
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.akilas.solarsaverprojectakilas.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SolarSaverProjectAkilas"
