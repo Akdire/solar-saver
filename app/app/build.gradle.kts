@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "no.uio.ifi.in2000.team14.solarsaver"
+    namespace = "com.akilas.solarsaverprojectakilas"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "no.uio.ifi.in2000.team14.solarsaver"
+        applicationId = "com.akilas.solarsaverprojectakilas"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
