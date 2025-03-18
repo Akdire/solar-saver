@@ -99,7 +99,7 @@ ObservationMetaData "1" --* "*" ObservationInfo
 ```
 
 # sequenceDiagram
-``` mermaid
+
     actor User
     participant UI as HomeScreen
     participant VM as HomeViewModel
@@ -107,7 +107,7 @@ ObservationMetaData "1" --* "*" ObservationInfo
     participant RR as RadiationRepository
     participant WR as WeatherRepository
     participant Calc as Calculations
-
+``` mermaid
     User->>UI: Enter address, roof details
     User->>UI: Press "Beregn estimert energi"
     UI->>VM: onButtonClick(address, area, degrees, direction)
