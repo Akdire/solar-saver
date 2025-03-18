@@ -97,3 +97,30 @@ OutputObservation "1" --* "*" ObservationMetaData
 
 ObservationMetaData "1" --* "*" ObservationInfo
 ```
+
+# sequenceDiagram
+``` mermaid
+    actor User
+    participant UI as HomeScreen
+    participant VM as HomeViewModel
+    participant CR as CoordinateRepository
+    participant RR as RadiationRepository
+    participant WR as WeatherRepository
+    participant Calc as Calculations
+
+    User->>UI: Enter address, roof details
+    User->>UI: Press "Beregn estimert energi"
+    UI->>VM: onButtonClick(address, area, degrees, direction)
+    VM->>CR: convertAddressToCoordinates(address)
+    CR-->>VM: [latitude, longitude]
+    VM->>RR: getRadiationData(latitude, longitude)
+    RR-->>VM: [overallAvgRadiation, summerAvg, winterAvg]
+    VM->>WR: getHistoricalAverageWeatherData(latitude, longitude, timeframe)
+    WR-->>VM: [temperature, cloudiness, snowLevel]
+    VM->>Calc: calculateNetRadiation(radiation, temp, cloud, snow)
+    Calc-->>VM: netRadiation
+    VM->>Calc: calculatePowerProduction(netRadiation, area, degrees, direction)
+    Calc-->>VM: expectedPower
+    VM->>UI: Update HomeUIState(netRadiation, expectedPower)
+    UI-->>User: Display results (e.g., 137 kWh/m², 1491 kWh)
+```
