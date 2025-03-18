@@ -205,5 +205,4 @@ Unntak:
 Merknader:
 •	Denne brukssaken gjenspeiler appens minimum viable product (MVP) i henhold til koden, og oppfyller de obligatoriske funksjonskravene: adresseoppslag, frostklimadata, strålingsberegning og effektestimering.
 •	Valgfrie funksjoner (f.eks. kartvisning, kostnadsbesparelser, Enova-støtte) er ikke implementert ennå, men kan forlenge denne brukstilfellet.
-![image](https://github.com/user-attachments/assets/9a721666-6e10-4e20-9bb7-427e861b01e7)
 
