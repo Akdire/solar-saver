@@ -4,6 +4,7 @@ lenger ned i dette dokumentet. Ha med hvorfor diagrammet er
 valgt og hva dere ønsker å med det.
 
 # Use Case Diagram
+Use Case helpe developers to see the overview of the main functionality of the app.
 ``` mermaid
 graph TD
     A[Homeowner] -->|Uses| B(Estimate Solar Power Production)
