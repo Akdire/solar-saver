@@ -1,5 +1,5 @@
 
-package no.uio.ifi.in2000.team14.solarsaver.ui.utils
+package com.akilas.solarsaverprojectakilas.util
 
 enum class Direction(private val retning: String): Name {
 
