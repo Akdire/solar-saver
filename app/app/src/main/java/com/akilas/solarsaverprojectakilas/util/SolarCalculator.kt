@@ -3,7 +3,7 @@ package com.akilas.solarsaverprojectakilas.util
 object SolarCalculator {
     // Calculate yearly kWh from radiation and weather
     fun calculateKwh(
-        radiation: Double, // Avg kWh/m²
+        radiation: Double, // Avg kWh/m² 
         temp: Double,     // °C
         clouds: Double,   // %
         snow: Double,     // cm
