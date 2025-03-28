@@ -1,4 +1,4 @@
-package no.uio.ifi.in2000.team14.solarsaver.ui.utils
+package com.akilas.solarsaverprojectakilas.util
 
 interface Name {
     fun fetchName(): String
